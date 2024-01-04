@@ -15,3 +15,6 @@ var newsFeed = [
         timeline: 'javascript is the best'
     }
 ];
+
+var userNamePrompt = prompt('what\'s your username?');
+var passwordPrompt = prompt('what\'s your password?');
