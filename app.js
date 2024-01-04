@@ -1,3 +1,4 @@
+// databse array
 var database = [
     {
         username: 'michael',
@@ -5,6 +6,7 @@ var database = [
     }
 ];
 
+// newsFeed array of objects
 var newsFeed = [
     {
         username: 'max',
@@ -16,9 +18,12 @@ var newsFeed = [
     }
 ];
 
+// declare prompts
 var userNamePrompt = prompt('what\'s your username?');
 var passwordPrompt = prompt('what\'s your password?');
 
+
+// sign in function
 function signIn(user, password) {
     if (user === database[0].username && 
         password === database[0].password) {
