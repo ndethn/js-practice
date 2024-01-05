@@ -31,33 +31,31 @@ var newsFeed = [
 
 ];
 
-
-
-
-// declare prompts
-var userNamePrompt = prompt('what\'s your username?');
-var passwordPrompt = prompt('what\'s your password?');
+function isUserValid(username, password) {
+    for (var i = 0; i < database.length; i++) {
+        if (database[i].username === username &&
+            database[i].password === password) {
+            return true;
+        }
+    }
+    return false;
+}
 
 
 // sign in function
-function signIn(user, password) {
-    for (var i = 0; i < database.length; i++) {
-        if (database[i].username === userNamePrompt &&
-            database[i].password === passwordPrompt) {
-                console.log(newsfeed);
-            } else {
-                alert('sorry, wrong username and password');
-            }
+function signIn(username, password) {
+    // console.log(isUserValid(username, password));
+
+    if (isUserValid(username, password)) {
+        console.log(newsFeed);
+    } else {
+        alert('sorry, wrong username and password');
     }
-
-
-    // if (user === database[0].username 
-    //     && password === database[0].password) {
-    //         console.log(newsFeed);
-    //         console.log('you are signed in');
-    //     } else {
-    //         alert('sorry, wrong username and password');
-    //     }
 }
 
-signIn(userNamePrompt, passwordPrompt);
+    // declare prompts
+    var userNamePrompt = prompt('what\'s your username?');
+    var passwordPrompt = prompt('what\'s your password?');
+
+
+    signIn(userNamePrompt, passwordPrompt);
