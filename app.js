@@ -3,6 +3,14 @@ var database = [
     {
         username: 'michael',
         password: 'whatpassword'
+    },
+    {
+        username: 'avery',
+        password: 'pw222'
+    },
+    {
+        username: 'alex',
+        password: '123'
     }
 ];
 
