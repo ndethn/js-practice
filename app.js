@@ -1,4 +1,4 @@
-// databse array
+// database array
 var database = [
     {
         username: 'michael',
@@ -23,8 +23,16 @@ var newsFeed = [
     {
         username: 'mary',
         timeline: 'javascript is the best'
-    }
+    },
+    {
+        username: 'mark',
+        timeline: 'thank you javascript'
+    },
+
 ];
+
+
+
 
 // declare prompts
 var userNamePrompt = prompt('what\'s your username?');
@@ -33,13 +41,23 @@ var passwordPrompt = prompt('what\'s your password?');
 
 // sign in function
 function signIn(user, password) {
-    if (user === database[0].username && 
-        password === database[0].password) {
-            console.log(newsFeed);
-            console.log('you are signed in');
-        } else {
-            alert('sorry, wrong username and password');
-        }
+    for (var i = 0; i < database.length; i++) {
+        if (database[i].username === userNamePrompt &&
+            database[i].password === passwordPrompt) {
+                console.log(newsfeed);
+            } else {
+                alert('sorry, wrong username and password');
+            }
+    }
+
+
+    // if (user === database[0].username 
+    //     && password === database[0].password) {
+    //         console.log(newsFeed);
+    //         console.log('you are signed in');
+    //     } else {
+    //         alert('sorry, wrong username and password');
+    //     }
 }
 
 signIn(userNamePrompt, passwordPrompt);
